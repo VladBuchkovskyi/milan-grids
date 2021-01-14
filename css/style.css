@@ -14,6 +14,7 @@ body{
     padding-top: 10px;
     width: 100%;
     text-align: center;
+    padding-bottom: 1000px;
 }
 .logo-name{
     display: flex;
@@ -135,6 +136,16 @@ body{
     height: 50px;
     margin-top: 40px;
 }
-/*@media (max-width: 600px){*/
-/*    */
-/*}*/
+@media (min-width: 768px){
+    .tourism{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /*grid-template-rows: repeat(3, auto);*/
+    }
+}
+@media (min-width: 1024px){
+    .tourism{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
