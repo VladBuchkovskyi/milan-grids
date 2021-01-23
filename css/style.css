@@ -14,7 +14,7 @@ body{
     padding-top: 10px;
     width: 100%;
     text-align: center;
-    padding-bottom: 1000px;
+    /*padding-bottom: 1000px;*/
 }
 .logo-name{
     display: flex;
@@ -59,6 +59,7 @@ body{
     margin: 0 auto 40px;
 }
 .tourism-item__photo{
+    /*box-sizing: border-box;*/
     margin: auto;
     width: 307px;
     height: 200px;
@@ -137,15 +138,33 @@ body{
     margin-top: 40px;
 }
 @media (min-width: 768px){
-    .tourism{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        /*grid-template-rows: repeat(3, auto);*/
+    .wrapper{
+        width: 700px;
+        margin: auto;
     }
-}
-@media (min-width: 1024px){
     .tourism{
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 310px);
+        grid-column-gap: calc(700px - 310px*2);
+    }
+    .contacts{
+        margin: 0;
+    }
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+}
+@media (min-width: 1200px){
+    .tourism{
+        display: grid;
+        grid-template-columns: repeat(3, 310px);
+        grid-column-gap: calc(135px/2);
+    }
+    .wrapper{
+        width: 1065px;
+        margin: auto;
     }
 }
